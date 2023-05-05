@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hard</title>
+</head>
+<style>
+    body{
+        padding: 50px;
+    }
+    table{        
+        width: 100%;
+        border-collapse: collapse;        
+            
+    }
+    .th1{
+        background-color: rgb(194, 9, 9);
+        color: aliceblue;        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    tr:nth-child(even){
+    background-color: #dddddd;
+   }
+   td, th{
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+   }
+</style>
+<body>
+    <table>
+        <tr>
+            <th class="th1" rowspan="2">Thứ</th>
+            <th class="th1" colspan="4">Hoạt động</th>
+        </tr>
+        <tr>
+            <th class="th1" colspan="2">Sáng</th>
+            <th class="th1" colspan="5">Chiều</th>
+        </tr>
+        <tr>
+            <td rowspan="4">Thứ hai</td>
+            <td class="td1">Toán</td>
+            <td class="td1">Toán</td>
+            <td class="td1">Tiếng Anh</td>
+            <td class="td1">Tiếng Anh</td>
+        </tr>
+        <tr>
+            <td class="td1">Tin Học</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Lào</td>
+        </tr>
+        <tr>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Lào</td>
+        </tr>
+        <tr>
+            <td class="td1">Khoa Học</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Lào</td>
+        </tr>
+        <tr>
+            <td style="background-color: none;">Thứ ba</td>
+            <td class="td1">Khoa Học</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Diệt</td>
+        </tr>
+        <tr>
+            <td style="background-color: white">Thứ tư</td>
+            <td class="td1">Khoa Học</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Bản Xứ</td>
+        </tr>
+        <tr>
+            <td>Thứ năm</td>
+            <td class="td1">Khoa Học</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Thái</td>
+        </tr>
+        <tr>
+            <td style="background-color: white">Thứ sáu</td>
+            <td class="td1">Khoa Học</td>
+            <td class="td1">Ngữ văn</td>
+            <td class="td1">Tiếng Lào</td>
+            <td class="td1">Tiếng Khmer</td>
+        </tr>
+    </table>
+</body>
+</html>
