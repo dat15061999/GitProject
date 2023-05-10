@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+</head>
+
+<body>
+    <script>
+        // let circle=prompt('Nhap ban kinh hinh tron',);
+        // a=parseInt(circle);
+        // let acreage =(a*a*(Math.PI));
+        // let cirrum=(a*2*(Math.PI));
+        // let short=Math.round(acreage*100)/100;
+        // let short2=Math.round(cirrum*100)/100;
+        // alert('Dien tich hinh tron la '+ short + ' m2');
+        // alert('Chu vi hinh tron la '+ short2 + ' m');
+
+        function getArea() {
+            let r = parseInt(prompt('Nhap ban kinh hinh tron'));
+            let area = Math.PI * r * r;
+            return area;
+        }
+        console.log('Dien tich hinh tron = '+' '+getArea());
+
+        function getCir(){
+            let r = parseInt(prompt('Nhap ban kinh hinh tron '));
+            let cir = Math.PI *2*r; 
+            return cir;
+        }
+        console.log('Chu vi hinh tron = '+' '+ getCir());
+
+
+
+
+    </script>
+</body>
+
+</html>

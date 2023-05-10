@@ -17,12 +17,12 @@ let height=10
 let area=width*height;
 document.write('area='+area);
 
-let a = prompt('Number a?',)
-    a = parseInt(a)
-let c = prompt('Number b?',)
-    c = parseInt(c)
+ inta = prompt('Number a?',)
+let a = parseInt(inta)
+ intc = prompt('Number b?',)
+let  c = parseInt(intc)
     if( a%c == 0 ){
-        alert('a chia het cho b');
+        alert('a chia het cho c');
     }
     else {
         alert('khong chia het');8

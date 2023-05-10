@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <script>
+        let Physical = prompt('Nhap diem ly',);
+        let Chemistry = prompt('Nhap diem hoa',);
+        let Math1 = prompt('Nhap diem toan',);
+        a = parseInt(Physical);
+        b = parseInt(Chemistry);
+        c = parseInt(Math1);
+        let d = (a + b + c);
+        let e = Math.round((d / 3) * 100) / 100;
+        document.write('Tong diem la ' + d);
+        document.write('<br/>');
+        document.write('Diem trung binh la ' + e);
+        document.write('<br/>');
+        if (e >= 8) {
+            document.write('Hoc sinh Gioi');
+        } else if (8 < e <= 6.5) {
+            document.write('Hoc sinh Kha');
+        } else if (6.5 < e < +5) {
+            document.write('Hoc sinh TB');
+        } else {
+            document.write('Hoc sinh Yeu');
+        }
+
+    </script>
+</body>
+
+</html>
