@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Mouse</title>
+</head>
+<style>
+    img{
+        border-radius: 50%;
+        width: 300px;
+        height: 250px;
+    }
+</style>
+<body>
+    <img id="myImg" src="https://static2.yan.vn/YanNews/202203/202203150551328043-4c92a17b-8427-421a-a237-7a396faf06cd.jpeg" alt="">
+    <p>This is the Cat</p>
+    <button value="clickme" onclick="moveRight()">Click</button>
+</body>
+</html>
+<script>
+    let imgOb = null;    
+    function init() {
+        imgOb = document.getElementById('myImg');
+        imgOb.style.position = 'relative';
+        imgOb.style.left= '100px';
+    }
+    function moveRight() {
+        imgOb.style.left = parseInt(imgOb.style.left) + 100 + 'px';
+
+    }
+    window.onload = init ;
+</script>
