@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,52 @@
     <title>Onclick Mouse</title>
 </head>
 <style>
-    img{
-        border-radius: 50%;
-        width: 300px;
-        height: 250px;
-    }
 </style>
-<body>
-    <img id="myImg" src="https://static2.yan.vn/YanNews/202203/202203150551328043-4c92a17b-8427-421a-a237-7a396faf06cd.jpeg" alt="">
-    <p>This is the Cat</p>
-    <button value="clickme" onclick="moveRight()">Click</button>
+
+<body onload="docReady()">
+       <img id="doremon"
+        src="https://doraemon2112shop.com/wp-content/uploads/2020/08/59875579_634137807060090_2576955986480726016_n.jpg"
+        style="position:absolute;left:0; top:0;" height="100" width="80" />
 </body>
+
 </html>
 <script>
-    let imgOb = null;    
-    function init() {
-        imgOb = document.getElementById('myImg');
-        imgOb.style.position = 'relative';
-        imgOb.style.left= '100px';
+        function upArrowPressed() {
+        let element = document.getElementById("doremon");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
     }
-    function moveRight() {
-        imgOb.style.left = parseInt(imgOb.style.left) + 100 + 'px';
+    function downArrowPressed() {
+        var element = document.getElementById("doremon");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+    function leftArrowPressed() {
+        var element = document.getElementById("doremon");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+    function rightArrowPressed() {
+        var element = document.getElementById("doremon");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
 
     }
-    window.onload = init ;
+    function moveSelection(evt) {
+        console.log(evt.keyCode);
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    function docReady() {
+        console.log("AAA");
+        window.addEventListener('keydown', moveSelection);
+    }
 </script>
