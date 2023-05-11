@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DO YOU LOVE ME</title>
+</head>
+<body>
+    <h1 style="position:absolute; left:220px; top:175px;">Do you love me?</h1>
+    <input type="button" onclick="onYes()"  style="position:absolute; left:285px; top:235px;" value="Yes"/>
+    <input type="button" id="mono" onmouseover="noLike()" style="position:absolute; left:360px; top:235px;" value="No"/>
+    <script>
+        function onYes() {
+            alert ('You are my sunshine');
+        }
+        function noLike(){
+            var x = Math.round(Math.random() * window.innerWidth);
+            var y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('mono').style.left = x +  'px';
+            document.getElementById('mono').style.right = y +  'px';
+        }
+    </script>
+</body>
+</html>
