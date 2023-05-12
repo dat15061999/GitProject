@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a = +(prompt('Diem toan'));
+    let b = +(prompt('Diem ly'));
+    let c = +(prompt('Diem Van'));
+    let d = +(prompt('Diem su'));
+    let e = +(prompt('Diem dia'));
+    let f = +(prompt('Diem hoa'));
+    let avr = Math.floor(((a+b+c+d+e+f)/6)*100)/100;
+
+    if (avr >=8) {
+        document.write('Diem trung binh la'+' '+avr+' '+'Dat loai gioi');
+    } else if (8<avr<=6.5) {
+        document.write('Diem trung binh la'+' '+avr+' '+'Dat loai kha');
+    } else if (6.5<avr<=5) {
+        document.write('Diem trung binh la'+' '+avr+' '+'Dat loai trung binh');
+    } else {
+        document.write('Diem trung binh la'+' '+avr+' '+'Dat loai yeu');
+    }
+</script>
+</html>
