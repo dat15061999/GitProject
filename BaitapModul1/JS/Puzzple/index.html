@@ -4,11 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="change.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <title>Game Puzzle</title>
+    <script src="change.js"></script>    
 </head>
+<style>
+    img {
+        width: 579px;
+        height: 96px;
+    }
+</style>
 <body>
-    
+    <table>
+        <tbody>
+        <tr>
+            <td><img src="images/1.1.png" id="img_1" onclick="changeImg(1)"></td>
+        </tr>
+        <tr>
+            <td><img src="images/2.2.png" id="img_2" onclick="changeImg(2)"></td>
+        </tr>
+        <tr>
+            <td><img src="images/3.3.png" id="img_3" onclick="changeImg(3)"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
+<script>
+    const lose_1 ="http://127.0.0.1:5500/images/1.1.pnghttp://127.0.0.1:5500/images/2.1.pnghttp://127.0.0.1:5500/images/3.1.png" 
+    const lose_2 ="http://127.0.0.1:5500/images/1.2.pnghttp://127.0.0.1:5500/images/2.2.pnghttp://127.0.0.1:5500/images/3.2.png" 
+    const lose_3 ="http://127.0.0.1:5500/images/1.3.pnghttp://127.0.0.1:5500/images/2.3.pnghttp://127.0.0.1:5500/images/3.3.png" 
+    const lose_4 ="http://127.0.0.1:5500/images/1.4.pnghttp://127.0.0.1:5500/images/2.4.pnghttp://127.0.0.1:5500/images/3.4.png" 
+    const lose_5 ="http://127.0.0.1:5500/images/1.5.pnghttp://127.0.0.1:5500/images/2.5.pnghttp://127.0.0.1:5500/images/3.5.png" 
+    const lose_6 ="http://127.0.0.1:5500/images/1.6.pnghttp://127.0.0.1:5500/images/2.6.pnghttp://127.0.0.1:5500/images/3.6.png" 
+
+    function changeImg(row){
+        let rdm = Math.ceil(Math.random()*6);
+        let imgName = `${row}.${rdm}.png`;
+        document.getElementById(`img_${row}`).src = `images/${imgName}`;
+        let check = document.getElementById('img_1').src + document.getElementById('img_2').src + document.getElementById('img_3');
+        if (check == lose_1 || check == lose_2 || check == lose_3 || check == lose_4 || check == lose_5 || check == lose_6){
+            document.getElementById('img_1').classList.add('lose');
+            document.getElementById('img_2').classList.add('lose');
+            document.getElementById('img_3').classList.add('lose');
+        } else {
+            document.getElementById('img_1').classList.remove('lose');
+            document.getElementById('img_2').classList.remove('lose');
+            document.getElementById('img_3').classList.remove('lose');            
+        }        
+    }
+        let addValue = 1;
+        function random() {
+            let rdm;
+            do {
+                rdm =Math.floor(Math.random()*6);
+            }
+            while (addValue == rdm ) 
+                addValue = rdm;
+            
+        }
+</script>
+

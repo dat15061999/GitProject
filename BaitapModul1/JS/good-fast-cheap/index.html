@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<style>
+
+</style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </th>
+                <th style="font-size:30px">Green</th>
+            </tr>
+            <tr>
+                <th>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider red"></span>
+                    </label>
+                </th>
+                <th style="font-size:30px">Red</th>
+            </tr>
+            <tr>
+                <th>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider blue"></span>
+                    </label>
+                </th>
+                <th style="font-size:30px">BLue</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script languages="javarscript">
+    let buttonAll = document.querySelectorAll('input');
+
+    buttonAll.forEach((btn, index) => {
+        btn.addEventListener("click", function () {
+            if (btn.checked) {
+                switch (index) {
+                    case 0:
+                        if (buttonAll[1].checked && buttonAll[2].checked) {
+                            buttonAll[0].checked = false;
+                        }
+                    case 1:
+                        if (buttonAll[0].checked && buttonAll[1].checked) {
+                            buttonAll[2].checked = false;
+                        }
+                    case 2:
+                        if (buttonAll[0].checked && buttonAll[2].checked) {
+                            buttonAll[1].checked = false;
+                        }                    
+                        break;
+                }
+            }
+        })
+    })
+</script>
