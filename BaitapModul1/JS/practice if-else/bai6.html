@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bai 6</title>
 </head>
+<style>
+    table, td, th {
+        padding: 10px;
+    }
+</style>
 <body>
     <table border="1" style="border-collapse: collapse;">
         <caption>Tinh hoa hong thang 10</caption>
@@ -15,26 +20,48 @@
                 <td>5%</td>
             </tr>
             <tr>
-                <td>Doanh thu >= 1.500.000 vnd</td>
+                <td>Doanh thu 2-> 1.500.000 vnd</td>
                 <td>4%</td>
             </tr>
             <tr>
-                <td>Doanh thu >= 1.000.000 vnd</td>
+                <td>Doanh thu 1.5 -> 1.000.000 vnd</td>
                 <td>3%</td>
             </tr>
             <tr>
-                <td>Doanh thu >= 500.000 vnd</td>
+                <td>Doanh thu 1-> 500.000 vnd</td>
                 <td>2%</td>
             </tr>
             <tr>
                 <td>Doanh thu < 500.000 vnd</td>
                 <td>0%</td>
             </tr>
+            <tr>
+                <td colspan="2"><p id="result"></p></td>
+            </tr> 
         </tbody>
     </table>
 </body>
 <script>
     let sold = +(prompt('Doanh thu thang 10 la'));
-    
+    let money = +(prompt('Luong cung la'));
+    if (sold >= 2000000) {
+        let a = Math.floor((money + (sold * 0.05))*100)/100;
+        document.getElementById('result').innerHTML ='Tong luong la'+' '+ a  +' '+'VND';
+        if ( 2000000 < sold <=1500000 ) {
+            let b = Math.floor((money + (sold * 0.04))*100)/100;
+        document.getElementById('result').innerHTML ='Tong luong la'+' '+ b  +' '+'VND';
+            if (1500000 < sold <= 1000000) {
+                let c = Math.floor((money + (sold * 0.03))*100)/100;
+            document.getElementById('result').innerHTML ='Tong luong la'+' '+ c  +' '+'VND';
+                if (1000000 < sold <= 500000) {
+                    let d = Math.floor((money + (sold * 0.02))*100)/100;
+                document.getElementById('result').innerHTML ='Tong luong la'+' '+ d  +' '+'VND';
+                } else {
+                document.getElementById('result').innerHTML ='Tong luong la'+' '+ money +' '+'VND';
+                }
+            } 
+            
+        }
+    }
 </script>
 </html>
