@@ -10,13 +10,14 @@
     
 </body>
 <script>
-    let sout;
-    for (var i=1; i<=10 ; i++){       
+   let sout='<table border="1">';
+    for (var i=1; i<=10 ; i++){
+        sout = sout +'<tr>';
             for (var j =1 ; j<=10 ; j++) {
-                sout = i*j ;
+            sout = sout +'<td style="padding:10px">'+ i+'x'+j+ '=' +i*j +'</td>';;
             }
-            
-    } 
-    document.write(i +'x'+ j +'='+sout);
+            sout = sout + '</tr>'
+    } sout = sout + '</table>';
+    document.write(sout);
 </script>
 </html>
