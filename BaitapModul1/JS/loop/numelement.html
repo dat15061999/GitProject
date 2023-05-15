@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    let number =+(prompt('nhap so'));
+    // checkNT(number);
+    // function checkNT(number){
+    
+    let count = 0;
+    let countNST=0;
+    for (var n=2; n <1000 ; n++) {
+        if (countNST <number) {
+            for( var j = 0; j<=n ; j++) {
+                if (n%j == 0) {
+                    count += 1;
+                }
+            }
+            if (count == 2 ) {
+                document.write(n + '<br>');
+                countNST += 1 ;
+            } 
+            count = 0;
+        } else {
+            break;
+        }
+    }
+    
+    // }
+</script>
+</html>
