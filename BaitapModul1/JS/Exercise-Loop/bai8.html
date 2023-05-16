@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 8</title>
+</head>
+
+<body>
+    <button id="demo" onclick="myPlay()">Choi</button>
+    <a href="bai8.html" style="text-decoration: none;"><button>Choi lai</button></a>
+</body>
+<script>
+    function myPlay() {
+        let value = +prompt('Khoang muon doan');
+        let random = Math.floor(Math.random(value) * 100);
+        let valueGuess = +prompt('Ban doan di');
+        for (let i = 0; i < 3;) {
+            if (valueGuess == random) {
+                alert('Ban da chien thang');
+                document.getElementById('demo').innerHTML = 'Ban da thang';
+                break;
+            } else if (valueGuess > random) {
+                valueGuess = +prompt('Lon r doan lai di');
+                i++;
+            } else if (valueGuess < random) {
+                valueGuess = +prompt('Nho hon r doan lai di');
+                i++;
+            }
+        }
+        document.getElementById('demo').innerHTML = 'Ban da thua';
+    }
+
+</script>
+
+</html>

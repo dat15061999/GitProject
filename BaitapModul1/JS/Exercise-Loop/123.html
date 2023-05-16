@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vi du</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var orders = [
+        {
+            name: 'Khóa học HTML - CSS Pro',
+            price: 3000000
+        },
+        {
+            name: 'Khóa học Javascript Pro',
+            price: 2500000
+        },
+        {
+            name: 'Khóa học React Pro',
+            price: 3200000
+        }
+    ]
+    let sum = 0;
+    let arrayLength = orders.length;
+    function getTotal() {
+        for (var i = 0; i < arrayLength; i++) {
+            sum += orders[i].price;
+        }
+        return sum;
+    }
+    getTotal();
+</script>
+
+</html>

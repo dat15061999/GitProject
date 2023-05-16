@@ -16,9 +16,9 @@
     // function checkNT(number){
     
     let count = 0;
-    let countNST=0;
+    let countSNT=0;
     for (var n=2; n <1000 ; n++) {
-        if (countNST <number) {
+        if (countSNT <number) {
             for( var j = 0; j<=n ; j++) {
                 if (n%j == 0) {
                     count += 1;
@@ -26,7 +26,7 @@
             }
             if (count == 2 ) {
                 document.write(n + '<br>');
-                countNST += 1 ;
+                countSNT += 1 ;
             } 
             count = 0;
         } else {
