@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIdu</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let students = [
+        {
+            id: 1,
+            name: 'Pham Vui Ve',
+            address: 'Hue'
+        },
+        {
+            id: 2,
+            name: 'Nguyen Thai Hoc',
+            address: 'Da Nang'
+        }
+    ]
+    let students2 = [
+        {
+            id: 3,
+            name: 'nguyen thanh hoa',
+            address: 'Ha noi'
+        }
+    ]
+    let newStudent = students.concat(students2);
+    console.log(newStudent)
+    let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let a = b.indexOf(11);
+    console.log(a)
+
+    var newStudents = students.map(function (studen) {
+        if (studen.id == 2) {
+            studen.address = 'pham phe phe';
+        }
+        return studen;
+    });
+    // for (var i = 0; i < students.length; i++) {
+    //     if (students[i].id == 2) {
+    //         students.splice(i, 1);
+    //     }
+
+    // }
+    // console.log(students)
+</script>
+
+</html>
