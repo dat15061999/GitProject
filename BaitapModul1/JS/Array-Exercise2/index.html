@@ -12,14 +12,37 @@
 
 </body>
 <script>
-    let a = [
+    document.write('bai1' + '<br/>');
+
+    let array = [
         [1, 2, 1, 24],
         [8, 11, 9, 4],
         [7, 0, 7, 27],
         [7, 4, 28, 14],
         [3, 10, 26, 7]
     ];
-    console.log(a[0])
+    for (var i in array) {
+        console.log("row" + i);
+        for (var j in array[i]) {
+            console.log(' ' + array[i][j]);
+        }
+    }
+    document.write('bai 2' + '<br/>');
+
+    let bAraay = ['c', 's', 'c', '2', '6', '1'];
+    document.write(bAraay.reverse() + '<br/>');
+    document.write('bai 3' + '<br/>');
+
+
+    let cArray = ['T', 'h', 'e', '-', 'B', 'o', 'y', '-', 'i', 'n', '-', 'C', 'l', 'a', 's', 's'];
+    let eArray = ['_'];
+    let new_Carray = '';
+    for (var a = 0; a < cArray.length; a++) {
+        if (cArray[a] == '-') {
+            cArray.splice(a, 1, '_');
+        }
+    }
+    document.write(cArray);
 </script>
 
 </html>
