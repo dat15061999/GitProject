@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var array = ['T', 'B', 'C', 'D', 'E', 'F', 'V', 'H', 'A', 'U', 'V'];
+    let look = '';
+    let count = 0;
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] == 'V') {
+            array.splice(i, 1)
+            array.push(0);
+            count += 1;
+        }
+    }
+    if (count >= 1) {
+        document.write("V is in the array" + '<br/>');
+    } else {
+        document.write("V isn't in the array");
+    }
+    document.write(array);
+
+</script>
+
+</html>

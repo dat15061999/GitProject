@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Falkingtextarea</title>
+</head>
+
+<body onload="fake()" style="text-align: center;">
+    <h1>Game Falkingtextarea</h1>
+    <form>
+        <label>
+            <textarea cols="30" rows="5" id="txt"></textarea>
+        </label>
+    </form>
+</body>
+<script>
+    let array = [];
+    let total = '';
+    array[1] = 'T';
+    array[2] = 'O';
+    array[3] = 'I';
+    array[4] = ' ';
+    array[5] = 'L';
+    array[6] = 'A';
+    array[7] = ' ';
+    array[8] = 'T';
+    array[9] = 'H';
+    array[10] = 'A';
+    array[11] = 'N';
+    array[12] = 'G';
+    array[13] = ' ';
+    array[14] = 'N';
+    array[15] = 'G';
+    array[16] = 'O';
+    array[17] = 'C';
+    array[18] = ' ';
+    array[19] = 'D';
+    array[20] = 'A';
+    array[21] = 'O';
+    array[22] = '!';
+
+    function fake() {
+        let text = document.getElementById('txt').value;
+        for (let i = 1; i <= text.length; i++) {
+            total = total + array[i];
+            if (i === 22) {
+                total = '';
+            }
+        }
+        document.getElementById('txt').value = total;
+        total = '';
+        setTimeout('fake()', 1);
+    }
+</script>
+
+</html>

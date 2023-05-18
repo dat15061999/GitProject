@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let numberAraay = [1, 22, 3, 4, 23, 54, 11, 12, 55, 12, 10, 13];
+    let Max = numberAraay[0];
+    let position = 0;
+
+    for (var i = 0; i < numberAraay.length; i++) {
+        if (Max < numberAraay[i]) {
+            Max = numberAraay[i];
+
+        }
+    }
+    for (var i = 0; i < numberAraay.length; i++) {
+        position += numberAraay[i];
+    }
+    document.write(Max + '<br/>');
+    document.write('TRUNG BINH CAC SO LA  ' + position / i + '<br/>');
+    document.write(i);
+
+</script>
+
+</html>
