@@ -9,15 +9,56 @@
 </head>
 
 <body>
-
+    <table>
+        <tbody>
+            <tr>
+                <td>Gia tri a :<input type="number" id="valuea"></td>
+            </tr>
+            <tr>
+                <td>Gia tri b :<input type="number" id="valueb"></td>
+            </tr>
+            <tr>
+                <td>Gia tri c :<input type="number" id="valuec"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="resultx1" size="15"></td>
+                <td><input type="text" id="resultx2" size="15"></td>
+                <td><button type="button" onclick="mathValue()">Tinh</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="result"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 <script>
-    function square(x) {
-        x = x * x;
+    function mathValue() {
+        let a = +(document.getElementById('valuea').value);
+        let b = +(document.getElementById('valueb').value);
+        let c = +(document.getElementById('valuec').value);
+        let delta = 0;
+        delta = b * b - (4 * a * c);
+        (console.log(delta))
+        let valuex1 = 0;
+        let valuex2 = 0;
+        if (delta > 0) {
+            valuex1 = (-b + Math.sqrt(delta)) / 2 * a;
+            valuex2 = (-b - Math.sqrt(delta)) / 2 * a;
+            document.getElementById('resultx1').value = valuex1;
+            document.getElementById('resultx2').value = valuex2;
+        } else if (delta = 0) {
+            valuex1 = -b / 2 * a;
+            document.getElementById('resultx1').value = valuex1;
+            document.getElementById('resultx2').value = valuex1;
+        } else {
+            document.getElementById('resultx1').value = 'Vo nghiem';
+            document.getElementById('resultx2').value = 'Vo nghiem';
+
+        }
     }
-    let y = 10;
-    square(y);
-    console.log(y); // -- no chang
+
 </script>
 
 </html>
