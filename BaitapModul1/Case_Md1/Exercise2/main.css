@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #fff200;
+    text-align: center;
+    height: 44px;
+}
+
+nav {
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li,
+a {
+    color: white;
+    font-size: 12px;
+}
+
+nav ul li:nth-child(1):hover a {
+    cursor: pointer;
+}
+
+nav ul li:nth-child(2) i {
+    font-size: 15px;
+    margin-left: 6px;
+    color: #fed100;
+}
+
+nav ul li:nth-child(2) a {
+    color: #fff200;
+}
+
+nav ul li:nth-child(4) {
+    position: relative;
+}
+
+nav ul li:nth-child(4) input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 6px;
+    outline: none;
+
+}
+
+nav ul li:nth-child(4) i {
+    position: absolute;
+    font-size: 15px;
+    right: 12px;
+    filter: invert(1);
+    line-height: 30px;
+    cursor: pointer;
+}
+
+nav ul li:nth-child(5) button {
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(124, 122, 122);
+    transition: all 0.5s ease;
+}
+
+nav ul li:nth-child(5) button i {
+    margin-right: 6px;
+}
+
+nav ul li:nth-child(5) button:hover {
+    background-color: rgb(138, 136, 136);
+    color: #fff200;
+}
+
+nav ul li:nth-child(6) {
+    text-align: center;
+}
+
+nav ul li:nth-child(6):hover a {
+    color: #fff200;
+}
+
+
+
+.btn-content {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #fff200;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+
+.btn-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: yellow;
+    display: block;
+    pointer-events: none;
+    animation: btnani 2s linear infinite;
+
+}
+
+nav ul li:nth-child(7):hover a {
+    color: #fff200;
+}
+
+@keyframes btnani {
+
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+nav ul li:nth-child(n+8):hover a {
+    color: #fff200;
+}
+
+.menu-bar {
+    background: #fed100;
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-bar ul li a {
+    color: black;
+    font-size: 14px;
+    margin-left: 10px;
+
+}
+
+.menu-bar ul li a i {
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+.menu-bar-content>ul>li {
+    padding: 12px 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+
+.menu-bar ul li:hover {
+    background: white;
+}
+
+.menu-bar ul li:nth-child(9) {
+    position: relative;
+}
+
+.menu-bar ul li:nth-child(9)::before {
+    position: absolute;
+    content: "Giảm 5%";
+    display: block;
+    height: 13px;
+    width: 45px;
+    background-color: red;
+    border-radius: 5px;
+    right: -6px;
+    top: 2px;
+    font-size: 10px;
+    padding-left: 3px;
+    color: white;
+}
+
+.menu-bar ul li:nth-child(9)::after {
+    position: absolute;
+    display: block;
+    width: 7px;
+    height: 7px;
+    background-color: red;
+    top: 11px;
+    content: "";
+    right: 26px;
+    z-index: 2;
+    transform: rotate(45deg);
+}
+
+/* ---------adress form------- */
+.adress-form {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    display: none;
+    z-index: 999;
+}
+
+.adress-form-content {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    margin-top: 200px;
+    border-radius: 5px;
+
+}
+
+.adress-form-content form {
+    padding: 0px 20px;
+}
+
+.adress-form-content h2 {
+    font-size: 15px;
+    padding: 15px 0px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.adress-form-content h2 i {
+    position: absolute;
+    display: block;
+    border: 1px solid #e3e0e0;
+    height: 30px;
+    padding: 0 10px;
+    right: 10px;
+    top: 10px;
+    line-height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.adress-form-content p {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.adress-form-content form input,
+select {
+    height: 40px;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #e3e0e0;
+    padding: 6px 0px;
+    border-radius: 5px;
+}
+
+.adress-button {
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid rgb(91, 88, 88);
+}
+
+
+.adress-form-content form .adress-button:hover {
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+#closeAdress:hover {
+    background-color: rgb(244, 191, 91);
+}
+
+/* -------submenu------- */
+.menu-bar-content ul li {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #ddd;
+    width: 250px;
+    height: auto;
+    left: 0;
+    top: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.submenu ul {
+    display: block;
+    flex-direction: column;
+}
+
+.submenu ul li {
+    padding: 6px 0;
+}
+
+.menu-bar-content ul li:hover .submenu {
+    display: flex;
+}
+
+.submenu ul li:hover {
+    background: none;
+}
+
+.submenu ul li:hover a {
+    color: #bd4824
+}
+
+/* <!-- ----------------slider-----------------> */
+.slider {
+    padding: 20px 0;
+    height: 350px;
+}
+
+.slider-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-content-left {
+    width: 65%;
+
+}
+
+.slider-content-right {
+    width: 35%;
+}
+
+.slider-content-left-top {
+    width: 100%;
+    height: 300px;
+}
+
+.slider-content-left-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-content-left-bottom {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ddd;
+    border-top: none;
+    height: 50px;
+
+
+}
+
+.slider-content-left-bottom>li {
+    width: 20%;
+    text-align: center;
+    padding: 6px 0;
+    cursor: pointer;
+    height: 100%;
+    line-height: 38px;
+    position: relative;
+}
+
+.slider-content-left-bottom>li::before {
+    display: block;
+    content: '';
+    height: 70%;
+    width: 1px;
+    position: absolute;
+    background-color: #ddd;
+    right: 0;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gioi Di Dong</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/banner.png" alt="Baner">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a><img style="width: 150px;" src="img/logo.png" /></a></li>
+                <li id="adress-form"><a href="#">Thừa Thiên Huế <i class="fas fa-caret-square-down"></i></a></li>
+                <div class="adress-form">
+                    <div class="adress-form-content">
+                        <h2>Chọn địa chỉ nhận hàng <i id='closeAdress' class="fa fa-times changecolor"
+                                style="color:black"></i></h2>
+                        <form action="">
+                            <p>Chọn địa chỉ nhận hàng đẻ biết chính xác thời gian giao</p>
+                            <select name="" id="">
+                                <option value="">--Chọn địa điểm</option>
+                                <option value="">Thừa Thiên Huế</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">--Chọn quận huyện</option>
+                                <option value="">Hương Thủy</option>
+                                <option value="">Hương Trà</option>
+                                <option value="">Phú Vang</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">--Chọn phường xã</option>
+                                <option value="">Phú Bài</option>
+                                <option value="">Phú Đa</option>
+                            </select>
+                            <input type="text" placeholder="Số nhà, tên đường" />
+                            <button class="adress-button">Xác nhận</button>
+                        </form>
+                    </div>
+                </div>
+                <li><input type="text" placeholder="Bạn tìm gì ..."><i class="fa fa-search"></i></li>
+                <li><a href=""><button><i class="fa fa-shopping-cart"></i>Giỏ hàng</button></a></li>
+                <li><a href="">Lịch sử <br />giao hàng</a></li>
+                <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Mua thẻ nạp ngay!</a></li>
+                <li><a href="">24h Công nghệ</a></li>
+                <li><a href="">Hỏi đáp</a></li>
+                <li><a href="">Game app</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa fa-mobile-alt"></i>Điện thoại</a></li>
+                    <li><a href=""><i class="fa fa-laptop"></i>Laptop</a></li>
+                    <li><a href=""><i class="fa fa-tablet-alt"></i>Tablet</a></li>
+                    <li><a href=""><i class="fa fa-headphones-alt"></i>Phụ kiện <i style="margin-left: 5px;"
+                                class="fas fa-caret-square-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện B</a></li>
+                                <li><a href="">Phụ kiện C</a></li>
+                                <li><a href="">Phụ kiện D</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=""><i class="fa fa-clock"></i>Đồng hồ thông minh</a></li>
+                    <li><a href=""><i class="fa fa-stopwatch"></i>Đồng hồ thời trang</a></li>
+                    <li><a href=""><i class="fa fa-desktop"></i>PC, Máy in<i style="margin-left: 5px;"
+                                class="fas fa-caret-square-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện B</a></li>
+                                <li><a href="">Phụ kiện C</a></li>
+                                <li><a href="">Phụ kiện D</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                                <li><a href="">Phụ kiện A</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Máy cũ giá rẻ</a></li>
+                    <li><a href="">Sim, thẻ cào</a></li>
+                    <li><a href="">Trả góp, điện nước</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------slider--------------- -->
+    <section calss="slider">
+        <div class="container">
+            <div class="slider-content">
+                <div class="slider-content-left">
+                    <div class="slider-content-left-top">
+                        <img src="img/slider1.png" alt="" />
+                        <!-- <img src="img/slider2.png" alt="" />
+                        <img src="img/slider3.png" alt="" />
+                        <img src="img/slider4.png" alt="" />
+                        <img src="img/slider5.png" alt="" /> -->
+                    </div>
+                    <div class="slider-content-left-bottom">
+                        <li>Tiêu đề 1</li>
+                        <li>Tiêu đề 2</li>
+                        <li>Tiêu đề 3</li>
+                        <li>Tiêu đề 4</li>
+                        <li>Tiêu đề 5</li>
+                    </div>
+                </div>
+                <div class="slider-content-right">
+                    <img src="img/img-slider1.png" alt="">
+                    <img src="img/img-slider2.png" alt="">
+                    <img src="img/img-slider3.png" alt="">
+                    <img src="img/img-slider4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js">
+
+    </script>
+</body>
+
+
+</html>

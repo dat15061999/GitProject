@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stabucks Landing Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br />It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta commodi deserunt itaque nostrum minus
+                    excepturi dolorem saepe unde adipisci fugit, officiis delectus cumque tempore sit voluptatem optio,
+                    aspernatur porro ab!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" alt="" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src='thump1.png' onclick="imgSlider('img1.png'),changeCircleColor('#d752b1')"></li>
+            <li><img src='thump2.png' onmouseenter="imgSlider('img2.png'),changeCircleColor('#017143')"></li>
+            <li><img src='thump3.png' onmouseenter="imgSlider('img3.png'),changeCircleColor('#eb7495')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="fabook.com.vn" type="_blank"><img src="fabook..png" /></a></li>
+            <li><a href="tiktok.com.vn" type="_blank"><img src="tiktok.png" /></a></li>
+            <li><a href="twitter.com" type="_blank"><img src="twitter.png" /></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+        }
+    </script>
+</body>
+
+</html>
