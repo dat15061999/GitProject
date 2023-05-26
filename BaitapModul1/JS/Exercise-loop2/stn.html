@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So nguyen to</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let numberofPrime = +prompt('Nhap so can dem');
+    let count = 0;
+    let isPrime = true;
+
+    for (let number = 2; number <= numberofPrime; number++) {
+        isPrime = true;
+        for (let i = 2; i < (number - 1); i++) {
+            if (number % 2 == 0) {
+                isPrime = false;
+                break;
+            }
+        } if (isPrime == true) {
+            console.log(number);
+            count++;
+        }
+    }
+</script>
+
+</html>

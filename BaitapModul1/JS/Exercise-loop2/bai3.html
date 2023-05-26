@@ -29,14 +29,27 @@
     // }
     // document.write('<br/>');
 
-    for (let d = 5; d > 0; d--) {
-        document.write(' ');
-        for (let e = 1; e <= d; e++) {
+    for (let n = 0; n < 5;) {
+        for (let d = 4; d > n; d--) {
+            document.write('&nbsp;&nbsp;');
+        }
+        for (let e = 0; e <= n; e++) {
             document.write('*');
         }
         document.write('<br/>');
+        n++;
     }
-
+    document.write('<br/>');
+    for (let n = 5; n > 0;) {
+        for (let d = 0; d > n; d++) {
+            document.write('&nbsp;&nbsp;');
+        }
+        for (let e = 0; e < n; e++) {
+            document.write('*');
+        }
+        document.write('<br/>');
+        n--;
+    }  
 </script>
 
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyenj tap</title>
+</head>
+
+<body>
+    <input id="ntn_1" type="button" value="bai 1" />
+    <input id="ntn_2" type="text" value="bai 2" />
+</body>
+<script>
+    // Bai 1
+    var view = document.getElementById('ntn_1');
+    view.addEventListener('click', function () {
+        alert('Hello word!');
+    })
+    // Bai 2
+    function number_2(x) {
+        return document.getElementById('ntn_2').value = x;
+    }
+    number_2(4);
+    // Bai 3
+    function boleanxy(a, b) {
+        if (a > b) {
+            alert('A > B');
+        } else {
+            return a + b;
+        }
+    }
+    console.log(boleanxy(3, 5));
+    //  Bai 4 
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    console.log('before' + result);
+    result = addNumbers();
+    console.log('after' + result);
+    // Bai 5
+    let star_1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let nameStar_2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Le']
+
+    function getStar(nameStar) {
+        for (let i in star_1) {
+            if (nameStar == star_1[i]) {
+                return nameStar_2[i];
+            } else {
+                console.log('Khong tim thay');
+            }
+        }
+    }
+    getStar('Polaris')
+    console.log(nameStar_2);
+
+</script>
+
+</html>

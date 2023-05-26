@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function isPrime(number) {
+        if (number == 2 || number == 3) {
+            document.write(number + 'la so nguyen to');
+        } else if (number < 2) {
+            document.write(number + ' kp la so nguyen to ');
+        } else {
+            if (number % 2 == 0) {
+                document.write(number + ' kp la so nguyen to ');
+            } else {
+                for (let i = 0; i < 10000; i++) {
+                    for (let j = 3; j <= (--number); j++) {
+                        ((++number) % j != 0) ? document.write(number + 'la so nguyen to ') :
+                            document.write(number + ' kp la so nguyen to '); break;
+                    } break;
+                }
+            }
+        }
+    }
+    isPrime(+prompt('Nhap so can kiem tra'));
+
+
+//     if ((++number) % j != 0) {
+//                             document.write(number + 'la so nguyen to ');
+//                             break;
+//                         } else {
+//                             document.write(number + ' kp la so nguyen to ');
+//                             break;
+//                         }
+// </script>
+
+</html>

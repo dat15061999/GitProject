@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Bai 1</p>
+    <input type="number" id="ntn_1" />
+    <input type="button" onclick="square_1()" value="Check" />
+    <p>Bai 2</p>
+    <input type="number" id="ntn_2" />
+    <input type="button" onclick="square_2()" value="Check Dien tich" />
+
+    <p>Bai 3</p>
+    <input type="number" id="ntn_3" />
+    <input type="button" onclick="square_3()" value="Check Chu vi" />
+
+    <p>Bai 4</p>
+    <input type="number" id="ntn_4" />
+    <input type="button" value="Check giai thua" id="ntn_44" />
+    <p>Bai 5</p>
+    <input type="text" id="ntn_5" />
+    <input type="button" value="Check so" onclick="checkNumber()" />
+    <p>Bai 6</p>
+    <p id="bai6"></p>
+
+    <p>Bai 7</p>
+    <p id="bai7"></p>
+    <input type="button" onclick="checkNumber1()" value="So kiem tra" />
+    <p>Bai 8</p>
+    <input type="button" id="bai8" value="Dao nguoc mang de" onclick="arraysNumber()" />
+    <P id="bai8_1"></P>
+    <P id="bai8_2"></P>
+    <p>Bai 9</p>
+    <input type="text" id="bai9_1" />
+    <p id="bai9_2"></p>
+    <button onclick="getNumber()">Bam vao day</button>
+</body>
+<script>
+    function square_1() {
+        let number_1 = document.getElementById('ntn_1').value;
+        let total_1 = number_1 * number_1;
+        document.getElementById('ntn_1').value = total_1;
+    }
+    function square_2() {
+        let number_1 = document.getElementById('ntn_2').value;
+        let total_1 = number_1 * number_1 * Math.PI;
+        document.getElementById('ntn_2').value = total_1;
+    }
+    function square_3() {
+        let number_1 = document.getElementById('ntn_3').value;
+        let total_1 = 2 * number_1 * Math.PI;
+        document.getElementById('ntn_3').value = total_1;
+    }
+    document.getElementById('ntn_44').addEventListener('click', function () {
+        let number_4 = document.getElementById('ntn_4').value;
+        let total = 1;
+
+        for (i = 1; i <= number_4; i++) {
+
+            total *= i;
+        }
+        document.getElementById('ntn_4').value = total;
+    })
+    // Bai 5
+    function checkNumber() {
+        var number_5 = prompt('nhap so');
+        if (isNumber(number_5)) {
+            return document.getElementById('ntn_5').value = 'true';
+        } else {
+            return document.getElementById('ntn_5').value = 'false';
+
+        }
+    }
+
+    // Bai6
+    function minNumber(x1, x2, x3) {
+        (x1 < x2 && x1 < x3) ? document.getElementById('bai6').innerHTML = `${x1} la so nho nhat` :
+            (x2 < x3) ? document.getElementById('bai6').innerHTML = `${x2} la so nho nhat` : document.getElementById('bai6').innerHTML = `${x3} la so nho nhat`;
+    }
+    minNumber(6, 4, 5)
+    // Bai 7
+    function checkNumber1() {
+        let number = +prompt('so can kierm tra');
+        switch (true) {
+            case number > 0:
+                document.getElementById('bai7').innerHTML = number + ' ' + 'true';
+                break;
+            default:
+                document.getElementById('bai7').innerHTML = 'false';
+                break;
+        }
+    }
+    // Bai 8
+    function arraysNumber() {
+        let arrays = [];
+        let size = Number(prompt('nhap kich thuoc'));
+        for (let i = 0; i < size; i++) {
+            let numbers = Number(prompt(`nhap so ${i + 1}`));
+            arrays[i] = numbers;
+        }
+        document.getElementById('bai8_1').innerHTML = arrays;
+        document.getElementById('bai8_2').innerHTML = arrays.reverse();
+    }
+    //  Bai 9
+    function getNumber() {
+        let numberofArrays = [0, 1, 2, 3, 4, '*', '*'];
+        let count = 0;
+        for (let i in numberofArrays) {
+            if (numberofArrays[i] == '*') {
+                document.getElementById('bai9_1').value = 'Tai vi tri la ' + i
+                count += 1;
+            }
+        } switch (true) {
+            case count > 0:
+                document.getElementById('bai9_2').innerHTML = 'So lan xuat hien la' + count;
+                break;
+            default:
+                document.getElementById('bai9_2').innerHTML = -1;
+
+                break;
+        }
+
+    }
+</script>
+
+</html>

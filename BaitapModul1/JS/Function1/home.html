@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ung dung quan ly san pham</title>
+</head>
+
+<body>''
+    <h1>Add New Product</h1>
+    <input id="inputProduct" type="text" placeholder="New Product" />
+    <button onclick="addValue()">Add</button>
+    <h1>Display All Product</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="3"></th>
+                <th colspan="1">
+                    <p id="countValue"></p>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <p id="result"></p>
+</body>
+<script>
+    let products = [];
+
+    function showValue() {
+        let sout = '<table>';
+        for (let i = 0; i < products.length; i++) {
+            sout += productItem(products[i][0], products[i][1]);
+        }
+        sout += '</table>';
+        document.getElementById('result').innerHTML = sout;
+    }
+
+    function productItem(id, name) {
+        var nameText = '<td><strong>' + name + '</strong></td>';
+        var editButton = '<td><button onClick="onEdit(' + id + ')">Edit</button></td>';
+        var deleteButton = '<td><button onClick="onDelete(' + id + ')">Delete</button></td>';
+        var c = '<input type="button" onClick="gotoNode(\'' + result.name + '\')" />';
+        return '<tr>' + nameText + editButton + deleteButton + '</tr>';
+    }
+
+    function onEdit(id) {
+        let productName = prompt('Update Prodcut');
+        if (productName == null) return;
+        for (let i = 0; i < products.length; i++) {
+            let product = products[i];
+            let productId = product[0];
+            if (productId == id) {
+                products[i][1] = productName;
+            }
+        }
+        showValue();
+    }
+
+
+    function onDelete(id) {
+        for (let i = 0; i < products.length; i++) {
+            let product = products[i];
+            let productId = product[0];
+            if (productId == id) {
+                products.splice(i, 1);
+            }
+        }
+        showValue();
+    }
+
+    function addValue() {
+        let productName = document.getElementById('inputProduct').value;
+        let lastId;
+        if (products.length == 0) {
+            lastId = 0;
+        } else {
+            lastId = products[products.length - 1][0];
+        }
+        products.push([lastId + 1, productName]);
+        showValue();
+    }
+</script>
+
+</html>
