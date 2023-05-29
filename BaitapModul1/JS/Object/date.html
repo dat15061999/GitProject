@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xay dung lop Date</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+    };
+    let date = new MyDate()
+    let day_1 = date.setDay(7)
+    let day_2 = date.setMonth(7)
+    let day_3 = date.setYear(2004)
+    let day = date.getDay()
+    let month = date.getMonth()
+    let Year = date.getYear()
+    console.log(day)
+    console.log(month)
+    console.log(Year)
+</script>
+
+</html>

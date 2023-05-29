@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1"></h1>
+</body>
+<script>
+    function creatArray(size, min, max) {
+        let array = [];
+        for (let i = 0; i < size; i++) {
+            array[i] = Math.ceil(Math.random() * (max - min)) + min;
+        }
+        return array;
+    }
+
+    function getCountEvenNumber(array) {
+        let count = 0;
+        for (let number of array) {
+            if (number % 2 == 0) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    let numbers = creatArray(10, 10, 20)
+    let count = getCountEvenNumber(numbers)
+    console.log(numbers);
+    console.log(count);
+    // document.write(creatArray(15, 1, 10));
+    // document.getElementById('h1').innerHTML = creatArray(30, 100, 300);
+</script>
+
+</html>

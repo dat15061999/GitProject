@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tao hinh torn bang Canvas</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1400px" height="768px" style="border:1px solid #000" />
+</body>
+<script>
+    let Circle = function (x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function createCircle() {
+        var ctx = document.getElementById('myCanvas').getContext('2d');
+        var radius = Math.floor(Math.random() * 80);
+        let areax = Math.floor(Math.random() * window.innerWidth)
+        let areay = Math.floor(Math.random() * window.innerHeight)
+        var circle = new Circle(areax, areay, radius);
+        ctx.beginPath()
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI)
+        ctx.fillStyle = getRandomColor();
+        ctx.fill();
+    }
+    for (let i = 0; i < 30; i++) {
+        createCircle()
+    }
+    function getRadomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+    function getRandomColor() {
+        let red = getRadomHex()
+        let blue = getRadomHex()
+        let green = getRadomHex()
+        return `rgb(${red},${blue},${green})`
+    }
+</script>
+
+</html>

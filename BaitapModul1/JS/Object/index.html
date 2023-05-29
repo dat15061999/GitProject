@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San pham</title>
+</head>
+
+<body>
+    <h1>Add New Product</h1>
+    <button onclick="addValue()">Add</button>
+    <h1>Display All Product</h1>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3"></th>
+                <th colspan="1">
+                    <p id="countValue"></p>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="result">
+
+        </tbody>
+    </table>
+</body>
+<script>
+    // let arr = [1, 4, 5, 6, 20];
+
+    // findAvg()
+    // function findAvg(arr) {
+
+    //     let sum = 0;
+
+    //     for (let i of arr) {
+    //         sum += i;
+    //     }
+    //     let avg = sum / arr.length;
+    //     return avg;
+    // }
+    let arr = [1, 2, 3, 4, -5]
+    // let max = arr[0];
+    // let min = arr[0];
+    // let avg = 0;
+    // let arrnew = [];
+    // let sum = 0;
+    // let name = ['Dojo'];
+    for (let i in arr) {
+        if (arr[i] < 0) {
+            arr[i] = arr.slice(i, 1, 2);
+        }
+    }
+
+    console.log(arr);
+    for (var x = 2; x < 8; x++) {
+        console.log(x);
+    }
+
+</script>
+
+</html>

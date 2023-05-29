@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap ve nha</title>
+</head>
+
+<body>
+    <!-- bài tập về nhà @channel 
+Viết chương trình tạo ra 1 mảng (matrix) 2 chiều với (size1, size2) và giá trị này được người dùng nhập vào.
+Giá trị của mảng matrix được sinh ngẩu nhiên trong khoảng [10, 50]
+Hiển thị mảng matrix này ra màn hình -->
+</body>
+<script>
+
+    function getArray(size1, size2) {
+        let arrays = [];
+        for (let i = 0; i < size1; i++) {
+            arrays[i] = [];
+            for (let j = 0; j < size2; j++) {
+                arrays[i][j] = Math.floor(Math.random() * 40 + 10);
+            }
+        }
+        console.log(arrays);
+    }
+    getArray(3, 4);
+
+
+
+    // let arrays = [];
+    // arrays = Math.floor(Math.random() * 50 + 10);
+    // arrays += Math.floor(Math.random() * 50 + 10);
+    // arrays += Math.floor(Math.random() * 50 + 10);
+    // arrays += Math.floor(Math.random() * 50 + 10);
+    // console.log(arrays);
+
+</script>
+
+</html>

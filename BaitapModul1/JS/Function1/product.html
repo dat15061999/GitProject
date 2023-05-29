@@ -7,6 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ung dung quan ly san pham</title>
 </head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    #result tr td {
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    #result tr td button:hover {
+        background: yellow;
+    }
+</style>
 
 <body>
     <h1>Add New Product</h1>
@@ -42,7 +60,7 @@
                 <td><button onclick="deleteValue('${index}')">Deltete</button></td>
             </tr>`
         })
-        document.getElementById('result').innerHTML = htmls.join(' ');
+        document.getElementById('result').innerHTML = htmls.join('');
     }
 
     function addValue() {
@@ -55,8 +73,12 @@
         showProduct();
     }
     function editValue(index) {
-        let productName = prompt('Nhap ten muon sua')
-        products.splice(index, 1, productName);
+        let productName;
+        do {
+            productName = prompt('Nhap ten muon sua')
+        }
+        while (productName == null)
+        products.splice(index, 1, productName)
         showProduct();
     }
 </script>
